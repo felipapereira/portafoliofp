@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Felipa Pereira | Product Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0C0C0D;--fg:#EEEDE8;--mut:#9B9B95;--card:#151516;--line:#272729;--acc:#9FB0FF;--pill:#EEEDE8;--pillt:#0C0C0D;--cr:#16160F;--nv:#4A647E}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}.w{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line)}
+nav{display:flex;gap:22px;align-items:center;height:58px;font-size:.95rem}nav b{margin-right:auto}nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--fg)}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;padding:72px 0 40px}
+h1{font:300 clamp(1.9rem,4.4vw,3.3rem)/1.08 "Cormorant Garamond","Iowan Old Style",Georgia,serif;letter-spacing:-.01em;margin:0 0 18px}
+.lead{color:var(--mut);font-size:1.1rem;max-width:52ch;margin:0 0 22px}
+.btn{display:inline-block;padding:11px 20px;border-radius:99px;background:var(--pill);color:var(--pillt);text-decoration:none;font-weight:600;font-size:.95rem;margin:0 8px 8px 0}.btn.o{background:none;color:var(--fg);border:1.5px solid var(--line)}
+.img{position:relative;border-radius:18px;background:var(--line) center/cover no-repeat;aspect-ratio:16/10;overflow:hidden}
+.img.av{aspect-ratio:1/1;border-radius:28px}.img span{display:none;position:absolute;inset:0;place-items:center;text-align:center;padding:10px;font-size:.85rem;color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:10px 0 0}
+.st{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}.st b{display:block;font-size:1.9rem;line-height:1.1;letter-spacing:-.02em}.st span{display:block;margin-top:6px;font-size:.85rem;color:var(--mut);line-height:1.35}
+section{padding:56px 0 0}h2{font-size:.85rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0 0 18px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px}.card h3{margin:14px 6px 2px;font-size:1.2rem}.card p{margin:4px 6px 8px;color:var(--mut);font-size:.95rem}
+.tag{display:inline-block;margin:0 6px 6px 0;padding:3px 11px;border:1px solid var(--line);border-radius:99px;font-size:.82rem;background:var(--card)}
+details{margin:6px 6px 4px}summary{cursor:pointer;font-weight:600;color:var(--acc);font-size:.92rem;list-style:none}summary::-webkit-details-marker{display:none}
+details ul,details ol{padding-left:1.1rem;margin:8px 0;font-size:.93rem}details h4{margin:12px 0 2px;font-size:.9rem}details p{font-size:.93rem;margin:2px 0}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.svc div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}.svc h3{margin:0 0 4px;font-size:1rem}.svc p{margin:0;font-size:.9rem;color:var(--mut)}
+.xp{display:grid;grid-template-columns:130px 1fr;gap:6px 24px;padding:18px 0;border-top:1px solid var(--line)}.xp .d{color:var(--mut);font-size:.9rem}.xp h3{margin:0;font-size:1.05rem}.xp .c{color:var(--mut);font-size:.92rem}.xp p{margin:6px 0 0;font-size:.95rem}
+.cta{text-align:center;padding:90px 0 60px}.cta h2{all:unset;display:block;font-size:clamp(1.8rem,4.5vw,3rem);letter-spacing:-.03em;font-weight:700;margin-bottom:18px}
+footer{border-top:1px solid var(--line);padding:22px 0 90px;color:var(--mut);font-size:.88rem}
+#bar{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:40}
+#bar button{font:600 .85rem inherit;font-family:inherit;padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:var(--pill);color:var(--pillt);cursor:pointer}#bar .x{display:none;background:var(--card);color:var(--fg)}
+.editing #bar .x{display:inline-block}.editing .img{cursor:pointer;outline:2px dashed var(--acc);outline-offset:-2px}.editing .img span{display:grid}.editing .img.has span{display:none}
+.editing [contenteditable]{outline:1px dashed var(--acc);outline-offset:2px;border-radius:3px}.editing a[data-l]{outline:1px dotted var(--acc)}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:40px}.xp{grid-template-columns:1fr}nav a:not(.k){display:none}}
+.ct{margin:70px 0 50px;padding:clamp(26px,6vw,64px);border-radius:28px;background:var(--cr);border:1px solid var(--line)}
+.big{font:300 clamp(2.6rem,7vw,4.6rem)/.98 "Cormorant Garamond","Iowan Old Style",Georgia,serif;letter-spacing:-.02em;text-transform:none;color:var(--fg);margin:0 0 26px;max-width:9em}
+#cf{max-width:560px}#cf label{display:block;font-size:.78rem;margin:18px 0 6px}
+#cf input,#cf textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:transparent;color:var(--fg);font:inherit;font-size:.95rem}
+#cf textarea{min-height:110px;resize:vertical}#cf input:focus,#cf textarea:focus{outline:2px solid var(--nv);outline-offset:1px}
+#cf button{width:100%;margin-top:22px;padding:14px;border:0;border-radius:3px;background:var(--nv);color:#fff;font:600 .85rem inherit;font-family:inherit;letter-spacing:.07em;cursor:pointer}#cf button:disabled{opacity:.6}
+#st{font-size:.9rem;min-height:1.4em;margin:12px 0 0}.ln{margin:18px 0 0;font-size:.95rem}
+.lab{font:.74rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0 0 14px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.in,.editing .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.ab{display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:start}.ab .img{aspect-ratio:4/5}.ab p{font-size:1.08rem;margin:0 0 16px;max-width:58ch}
+a.pc{display:block;text-decoration:none;transition:transform .25s,border-color .25s}a.pc:hover{transform:translateY(-4px);border-color:var(--acc)}
+.case{display:none}.case:target,.case:has(:target){display:block;position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;padding:calc(28px + env(safe-area-inset-top,0px)) 0 100px}
+.case h1.cs{font-size:clamp(2.6rem,8vw,5.6rem);line-height:1;margin:26px 0 28px}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin:0 0 28px}.meta dt{margin:0 0 4px}.meta dd{margin:0;font-size:.98rem}
+.case .img.hero{aspect-ratio:16/9;border-radius:14px}.case h2{margin-top:56px}.ov{font-size:1.2rem;max-width:62ch}
+.ix{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}.ix a{display:flex;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none}.ix b{font:.8rem ui-monospace,Menlo,monospace;color:var(--acc)}.ix i{margin-left:auto;font-style:normal;color:var(--mut);font-size:.85rem;text-align:right}
+.ph{padding:48px 0 0;display:grid;grid-template-columns:1fr 1.4fr;gap:6px 40px}.ph .lab{grid-column:1}.ph h3{grid-column:1;font:300 2rem/1.1 "Cormorant Garamond",Georgia,serif;margin:0}.ph p{grid-column:2;grid-row:1/3;margin:0;font-size:1.05rem}.ph .img{grid-column:1/3;margin-top:22px;aspect-ratio:16/8}
+blockquote.co{margin:60px 0 0;padding:28px;border-left:3px solid var(--acc);background:var(--card);font:300 clamp(1.4rem,3vw,2rem)/1.25 "Cormorant Garamond",Georgia,serif}
+.nx{display:block;margin-top:50px;padding:22px 0;border-top:1px solid var(--line);text-decoration:none;font-size:1.3rem}
+@media(max-width:720px){.ab,.ph{grid-template-columns:1fr}.ph p,.ph .img{grid-column:1;grid-row:auto}}
+</style>
+</head>
+<body>
+<header><div class="w"><nav><b>Felipa Pereira</b><a href="#sobre">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#hago">Qué hago</a><a href="#exp">Experiencia</a><a class="k" href="#contacto">Contacto</a></nav></div></header>
+<div id="app">
+<div class="w">
+<div class="hero">
+<div>
+<p class="lab">Senior Product Manager · +8 años de experiencia</p>
+<h1>Hola, soy Felipa. Transformo insights de mercado y comportamiento del consumidor en productos, estrategias y experiencias orientadas a generar crecimiento y resultados de negocio.</h1>
+<a class="btn" data-l href="https://www.linkedin.com/in/felipapereira/">LinkedIn</a><a class="btn o" href="#proyectos">Ver proyectos</a>
+</div>
+<div class="img av"><span>Haz clic para cargar tu foto</span></div>
+</div>
+<div class="stats">
+<div class="st"><b>+25%</b><span>market share en la categoría móvil (Todegol, Samsung)</span></div>
+<div class="st"><b>+30%</b><span>leads y clientes nuevos (Rakiura)</span></div>
+<div class="st"><b>+600</b><span>unidades vendidas en dos meses (WHERE IS EDEN)</span></div>
+<div class="st"><b>10</b><span>fragancias lanzadas en mi marca</span></div>
+<div class="st"><b>4</b><span>marcas de consumo masivo gestionadas (Montana)</span></div>
+<div class="st"><b>8+</b><span>años en producto, marca y marketing</span></div>
+</div>
+
+<section id="sobre"><h2>Sobre mí</h2><div class="ab"><div class="img"><span>Haz clic para cargar tu foto</span></div><div>
+<p>Soy Licenciada en Marketing y Publicidad y he desarrollado mi carrera trabajando en la intersección entre producto, marketing, negocio y consumidor.</p>
+<p>Mi experiencia incluye estrategia de producto, gestión de portafolio, pricing, go-to-market, lanzamientos, growth, e-commerce, consumer insights y análisis de datos.</p>
+<p>Me interesa especialmente entender qué impulsa las decisiones de las personas y utilizar datos, investigación y Behavioral Design para desarrollar productos y experiencias más relevantes.</p>
+<p>Además de trabajar en equipos comerciales y de producto, actualmente aplico esta experiencia en el desarrollo de mi propia marca, WHERE IS EDEN, donde soy Founder y Product Manager.</p></div></div></section>
+<section id="proyectos"><h2>Proyectos destacados</h2><div class="grid"><a class="card pc" href="#eden"><div class="img"><span>Imagen: WHERE IS EDEN</span></div><h3>WHERE IS EDEN</h3><p>Marca de perfumes · Founder y Product Manager · 2026</p><p class="lab">Ver caso →</p></a><a class="card pc" href="#player"><div class="img"><span>Imagen: PLAYER</span></div><h3>PLAYER</h3><p>Desarrollo de producto y marca · Retail</p><p class="lab">Ver caso →</p></a><a class="card pc" href="#ecommerce"><div class="img"><span>Imagen: Ecommerce de tecnología desde cero</span></div><h3>Ecommerce de tecnología desde cero</h3><p>Proyecto demostrativo</p><p class="lab">Ver caso →</p></a><div class="card"><div class="img"><span>Imagen: Samsung</span></div><h3>Categoría móvil, Samsung</h3><p>Todegol S.A. · Product Manager · 2021–2023. Lancé productos, definí pricing y promociones y coordiné con retailers: +25% de market share.</p></div></div></section>
+
+<section id="hago"><h2>Qué hago</h2>
+<div class="svc">
+<div><h3>Estrategia y roadmap de producto</h3><p>Investigo al usuario, defino propuesta de valor y MVP, diseño la experiencia con criterio de UX, fijo criterios de éxito y armo el roadmap hasta el lanzamiento.</p></div>
+<div><h3>Go-to-market y lanzamiento</h3><p>Segmentación, posicionamiento, canales y plan de lanzamiento con métricas claras.</p></div>
+<div><h3>Mercado, competencia y consumer insights</h3><p>Quién compra, por qué, contra quién compites y dónde hay oportunidad.</p></div>
+<div><h3>Portafolio y pricing</h3><p>Qué productos potenciar, corregir o retirar, y cómo fijar precios y promociones según margen y mercado.</p></div>
+<div><h3>Behavioral design aplicado al producto</h3><p>Identifico qué influye en la decisión del cliente y lo convierto en mejoras de oferta, mensaje y experiencia.</p></div>
+<div><h3>Agentes de IA para atención y ventas</h3><p>Asistentes en WhatsApp e Instagram conectados al catálogo, con reglas claras de derivación a una persona.</p></div>
+<div><h3>Conexión con tráfico pago</h3><p>Conozco Meta, TikTok y Google Ads para alinear tu tienda con las campañas y medir CAC y ROAS. No hago gestión diaria de redes.</p></div>
+</div></section>
+
+<section><h2>Habilidades y herramientas</h2>
+<p><span class="tag t">Estrategia de producto</span><span class="tag t">Go-to-market</span><span class="tag t">Roadmap y MVP</span><span class="tag t">Pricing y márgenes</span><span class="tag t">Análisis de portafolio</span><span class="tag t">Consumer insights</span><span class="tag t">Behavioral design</span><span class="tag t">Packaging y desarrollo de producto</span><span class="tag t">Sourcing en China</span><span class="tag t">Ecommerce y marketplaces</span><span class="tag t">Agentes de IA</span><span class="tag t">Power BI</span><span class="tag t">Excel</span><span class="tag t">GA4</span><span class="tag t">Zoho CRM</span><span class="tag t">Meta, TikTok y Google Ads</span></p></section>
+
+<section id="exp"><h2>Experiencia</h2>
+<div class="xp"><div class="d">Jun 2026 – hoy</div><div><h3>Founder y Product Manager</h3><div class="c">WHERE IS EDEN</div><p>Marca de perfumes con 10 fragancias lanzadas y más de 600 unidades vendidas en dos meses.</p></div></div>
+<div class="xp"><div class="d">Proyecto</div><div><h3>Desarrollo de producto y marca</h3><div class="c">PLAYER</div><p>Selección de productos, packaging, proveedores en China, pricing, canales y lanzamiento.</p></div></div>
+<div class="xp"><div class="d">Ene – May 2026</div><div><h3>Gerente de Línea Neurología</h3><div class="c">Eticos</div><p>Estrategia, desarrollo de mercado y posicionamiento de productos Boston Scientific; gestión de presupuesto.</p></div></div>
+<div class="xp"><div class="d">Abr – Nov 2025</div><div><h3>Gerente Comercial</h3><div class="c">Rakiura</div><p>Embudo, customer journey y CRM Zoho: +30% de leads y clientes nuevos. Campañas en Meta Ads.</p></div></div>
+<div class="xp"><div class="d">Sep 2023 – Mar 2025</div><div><h3>Key Account Coordinator</h3><div class="c">ZTE Corporation</div><p>Portafolio, go-to-market local, pricing y roadmap; fichas y contenido para marketplaces; dashboards en Power BI.</p></div></div>
+<div class="xp"><div class="d">Mar 2021 – Jul 2023</div><div><h3>Product Manager</h3><div class="c">Todegol S.A. (distribuidora Samsung)</div><p>Categoría móvil, lanzamientos y pricing: +25% de market share.</p></div></div>
+<div class="xp"><div class="d">Mar – Dic 2020</div><div><h3>Open Market Supervisor</h3><div class="c">Huawei Technologies</div><p>Adopción de producto y crecimiento de canal B2B y B2C.</p></div></div>
+<div class="xp"><div class="d">Mar 2019 – Mar 2020</div><div><h3>Brand Manager</h3><div class="c">Montana S.A.</div><p>Estrategia de 4 marcas: presupuesto, forecast y ROI.</p></div></div>
+<div class="xp"><div class="d">Jun 2017 – Feb 2019</div><div><h3>Ejecutiva de Cuentas</h3><div class="c">Agencia Digital W3</div><p>Estrategia digital y reportes para 5 cuentas en Meta Ads, Google Ads y redes.</p></div></div>
+</section>
+
+<section><h2>Formación</h2>
+<ul><li>Licenciatura en Marketing y Publicidad, Universidad Americana</li><li>Behavioral Design y Psicología del Consumidor, PUCP</li><li>Product Manager Professional Certification, IBM</li><li>Mercado y Competencia en la Estrategia de Precios, University of Virginia y BCG</li><li>Gestión de Marca y Producto, IE Business School</li><li>Google Digital Marketing &amp; E-commerce Certificate, Coursera</li></ul>
+<p style="color:var(--mut)">Idiomas: español nativo, inglés intermedio.</p></section>
+
+<section id="contacto" class="ct">
+<h2 class="big">Hablemos de tu idea</h2>
+<form id="cf" action="https://formsubmit.co/felipapereira96@gmail.com" method="POST">
+<label for="n">Nombre *</label><input id="n" name="name" required placeholder="Tu nombre" autocomplete="name">
+<label for="e">Email *</label><input id="e" name="email" type="email" required placeholder="tu@email.com" autocomplete="email">
+<label for="m">Contame brevemente sobre tu idea o desafío</label><textarea id="m" name="message" placeholder="Describí tu situación actual, el problema que querés resolver o el objetivo que tenés en mente..."></textarea>
+<input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<button type="submit">HABLEMOS →</button>
+<p id="st" role="status" aria-live="polite"></p>
+</form>
+<p class="ln">O escribime por <a data-l href="https://www.linkedin.com/in/felipapereira/"><b>LinkedIn</b></a>.</p>
+</section>
+<article class="case" id="eden"><div class="w"><a class="lab" href="#proyectos">← Proyectos</a><h1 class="cs">WHERE IS EDEN</h1><dl class="meta"><div><dt class="lab">Rol</dt><dd>Founder y Product Manager</dd></div><div><dt class="lab">Marca</dt><dd>WHERE IS EDEN</dd></div><div><dt class="lab">Categoría</dt><dd>Perfumería</dd></div><div><dt class="lab">Año</dt><dd>2026</dd></div></dl><div class="img hero"><span>Imagen principal del proyecto</span></div><h2>Resumen</h2><p class="ov">Marca de perfumes lanzada en junio de 2026 con 10 fragancias. Construí el producto, la marca y la experiencia de compra desde cero, con una premisa: facilitar que el cliente pueda oler antes de decidir. <a data-l href="https://www.whereiseden.com.py">whereiseden.com.py</a></p><h2>El proceso</h2><ol class="ix"><li><a href="#eden-1"><b>01</b>Exploración e insight<i>Problema · Consumidor</i></a></li><li><a href="#eden-2"><b>02</b>Concepto y posicionamiento<i>Marca · Estrategia</i></a></li><li><a href="#eden-3"><b>03</b>Producto y packaging<i>Diseño de producto</i></a></li><li><a href="#eden-4"><b>04</b>MVP y pricing<i>Colección · Precios</i></a></li><li><a href="#eden-5"><b>05</b>Experiencia de compra<i>Probar · Elegir</i></a></li><li><a href="#eden-6"><b>06</b>Lanzamiento y comunidad<i>Go-to-market · Comunidad</i></a></li></ol><section class="ph" id="eden-1"><div class="lab">01</div><h3>Exploración e insight</h3><p>Comprar perfume es una decisión sensorial: sin poder oler, el cliente duda, sobre todo con una marca nueva o al comprar online. Ese fue el punto de partida.</p><div class="img"><span>Imagen: Exploración e insight</span></div></section><section class="ph" id="eden-2"><div class="lab">02</div><h3>Concepto y posicionamiento</h3><p>Definí el concepto de marca y la estrategia de posicionamiento: perfumería para quienes saben elegir.</p><div class="img"><span>Imagen: Concepto y posicionamiento</span></div></section><section class="ph" id="eden-3"><div class="lab">03</div><h3>Producto y packaging</h3><p>Diseñé el producto y su packaging para que la marca se reconozca y comunique su propuesta.</p><div class="img"><span>Imagen: Producto y packaging</span></div></section><section class="ph" id="eden-4"><div class="lab">04</div><h3>MVP y pricing</h3><p>Definí el MVP, una colección de 10 fragancias, y la estrategia de pricing.</p><div class="img"><span>Imagen: MVP y pricing</span></div></section><section class="ph" id="eden-5"><div class="lab">05</div><h3>Experiencia de compra</h3><p>Diseñé la experiencia con todas las facilidades para que el cliente pueda oler y comparar.</p><div class="img"><span>Imagen: Experiencia de compra</span></div></section><section class="ph" id="eden-6"><div class="lab">06</div><h3>Lanzamiento y comunidad</h3><p>Planifiqué el lanzamiento y construí una comunidad alrededor de la marca.</p><div class="img"><span>Imagen: Lanzamiento y comunidad</span></div></section><blockquote class="co">Más de 600 unidades vendidas en los dos primeros meses y una comunidad creada alrededor de la marca.</blockquote><a class="nx" href="#player">Siguiente proyecto → PLAYER</a></div></article><article class="case" id="player"><div class="w"><a class="lab" href="#proyectos">← Proyectos</a><h1 class="cs">PLAYER</h1><dl class="meta"><div><dt class="lab">Rol</dt><dd>Desarrollo de producto y marca</dd></div><div><dt class="lab">Marca</dt><dd>PLAYER</dd></div><div><dt class="lab">Canal</dt><dd>Retail</dd></div></dl><div class="img hero"><span>Imagen principal del proyecto</span></div><h2>Resumen</h2><p class="ov">Marca desarrollada de punta a punta: desde decidir qué productos vender hasta llevarlos a los retailers. <a data-l href="https://www.instagram.com/player.py/">@player.py</a></p><h2>El proceso</h2><ol class="ix"><li><a href="#player-1"><b>01</b>Mercado y demanda<i>Selección de productos</i></a></li><li><a href="#player-2"><b>02</b>Packaging<i>Diseño</i></a></li><li><a href="#player-3"><b>03</b>Proveedores en China<i>Sourcing · Producción</i></a></li><li><a href="#player-4"><b>04</b>Pricing y márgenes<i>Rentabilidad</i></a></li><li><a href="#player-5"><b>05</b>Canales y retailers<i>Venta</i></a></li><li><a href="#player-6"><b>06</b>Lanzamiento y marketing<i>Go-to-market</i></a></li></ol><section class="ph" id="player-1"><div class="lab">01</div><h3>Mercado y demanda</h3><p>Analicé el mercado y la demanda del consumidor para seleccionar los productos de la marca.</p><div class="img"><span>Imagen: Mercado y demanda</span></div></section><section class="ph" id="player-2"><div class="lab">02</div><h3>Packaging</h3><p>Diseñé el packaging para que la marca se reconozca y comunique el producto.</p><div class="img"><span>Imagen: Packaging</span></div></section><section class="ph" id="player-3"><div class="lab">03</div><h3>Proveedores en China</h3><p>Seleccioné los proveedores y trabajé con ellos en el desarrollo y la producción.</p><div class="img"><span>Imagen: Proveedores en China</span></div></section><section class="ph" id="player-4"><div class="lab">04</div><h3>Pricing y márgenes</h3><p>Definí la estrategia de precios y los márgenes, considerando costos, margen de los retailers y competencia.</p><div class="img"><span>Imagen: Pricing y márgenes</span></div></section><section class="ph" id="player-5"><div class="lab">05</div><h3>Canales y retailers</h3><p>Definí los canales de venta y la propuesta comercial para los retails.</p><div class="img"><span>Imagen: Canales y retailers</span></div></section><section class="ph" id="player-6"><div class="lab">06</div><h3>Lanzamiento y marketing</h3><p>Preparé la estrategia de lanzamiento y el plan de marketing.</p><div class="img"><span>Imagen: Lanzamiento y marketing</span></div></section><blockquote class="co">Un producto propio con packaging, proveedores, precios y canales definidos para llegar al retail.</blockquote><a class="nx" href="#ecommerce">Siguiente proyecto → Ecommerce de tecnología</a></div></article><article class="case" id="ecommerce"><div class="w"><a class="lab" href="#proyectos">← Proyectos</a><h1 class="cs">Ecommerce de tecnología desde cero</h1><dl class="meta"><div><dt class="lab">Tipo</dt><dd>Proyecto demostrativo</dd></div><div><dt class="lab">Rol</dt><dd>Product Manager</dd></div><div><dt class="lab">Rubro</dt><dd>Tecnología y accesorios móviles</dd></div></dl><div class="img hero"><span>Imagen principal del proyecto</span></div><h2>Resumen</h2><p class="ov">Ejercicio de producto que muestra cómo concibo y lanzo un ecommerce desde cero, en un rubro que conozco por mi trabajo con Samsung, ZTE y Huawei. </p><h2>El proceso</h2><ol class="ix"><li><a href="#ecommerce-1"><b>01</b>Hipótesis y usuarios<i>Descubrimiento</i></a></li><li><a href="#ecommerce-2"><b>02</b>Propuesta de valor<i>Posicionamiento</i></a></li><li><a href="#ecommerce-3"><b>03</b>MVP<i>Alcance</i></a></li><li><a href="#ecommerce-4"><b>04</b>Experiencia de compra<i>Behavioral design</i></a></li><li><a href="#ecommerce-5"><b>05</b>Portafolio y pricing<i>Márgenes</i></a></li><li><a href="#ecommerce-6"><b>06</b>Éxito y roadmap<i>KPIs · Fases</i></a></li></ol><section class="ph" id="ecommerce-1"><div class="lab">01</div><h3>Hipótesis y usuarios</h3><p>El comprador duda de la originalidad, la garantía y la entrega. Definí tres usuarios: el que compara, el que necesita asesoría y el del interior.</p><div class="img"><span>Imagen: Hipótesis y usuarios</span></div></section><section class="ph" id="ecommerce-2"><div class="lab">02</div><h3>Propuesta de valor</h3><p>Tecnología con garantía clara, asesoría por WhatsApp antes de comprar y entrega con plazos reales.</p><div class="img"><span>Imagen: Propuesta de valor</span></div></section><section class="ph" id="ecommerce-3"><div class="lab">03</div><h3>MVP</h3><p>30 a 50 productos de alta rotación en tres categorías, checkout simple, dos medios de pago y entrega en Asunción primero.</p><div class="img"><span>Imagen: MVP</span></div></section><section class="ph" id="ecommerce-4"><div class="lab">04</div><h3>Experiencia de compra</h3><p>Comparador simple, reseñas como prueba social, garantía visible y paquetes que muestran el valor de cada opción.</p><div class="img"><span>Imagen: Experiencia de compra</span></div></section><section class="ph" id="ecommerce-5"><div class="lab">05</div><h3>Portafolio y pricing</h3><p>Tres grupos: productos que atraen tráfico, rentables y de nicho, con precios y promociones por grupo.</p><div class="img"><span>Imagen: Portafolio y pricing</span></div></section><section class="ph" id="ecommerce-6"><div class="lab">06</div><h3>Éxito y roadmap</h3><p>Conversión, abandono, entregas a tiempo, recompra y margen. Tres fases: MVP, confianza y escala (IA en WhatsApp), crecimiento.</p><div class="img"><span>Imagen: Éxito y roadmap</span></div></section><blockquote class="co">Proyecto demostrativo: las metas son objetivos de diseño, no resultados reales.</blockquote><a class="nx" href="#eden">Siguiente proyecto → WHERE IS EDEN</a></div></article></div>
+</div>
+<footer><div class="w">© Felipa Pereira · <a href="https://www.linkedin.com/in/felipapereira/">LinkedIn</a></div></footer>
+<input type="file" id="f" accept="image/*" hidden>
+<div id="bar"><button class="x" id="sv">Guardar HTML</button><button class="x" id="rs">Reiniciar</button><button id="tg">Editar</button></div>
+<script>
+const $=s=>document.querySelector(s),app=$('#app'),KEY='folio-felipa-v2',ED='#app h1,#app h3,#app h4,#app p,#app li,#app .t,#app summary,#app .d,#app .c,#app .st b,#app .st span,#app .lead,#app .big,#app dd,#app .ov,#app blockquote,#app .lab,#app .nx,#app label,#app .ln';
+let pick=null,tm;
+try{const v=localStorage.getItem(KEY);if(v)app.innerHTML=v}catch(e){}
+function setEdit(on){document.body.classList.toggle('editing',on);document.querySelectorAll(ED).forEach(e=>on?e.setAttribute('contenteditable','true'):e.removeAttribute('contenteditable'));if(on)app.querySelectorAll('details').forEach(d=>d.open=true);$('#tg').textContent=on?'Salir de edición':'Editar'}
+function persist(){try{localStorage.setItem(KEY,app.innerHTML)}catch(e){alert('No hay espacio para el autoguardado. Usa "Guardar HTML".')}}
+setEdit(false);
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.card,.svc>div,.xp,.st,.ph').forEach(e=>{if(!e.classList.contains('in')){e.classList.add('rv');io.observe(e)}});
+$('#tg').onclick=()=>{const on=!document.body.classList.contains('editing');setEdit(on);if(!on)persist()};
+app.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(persist,600)});
+document.addEventListener('click',e=>{if(!document.body.classList.contains('editing'))return;
+const im=e.target.closest('.img');if(im){e.preventDefault();pick=im;$('#f').click();return}
+const a=e.target.closest('a[data-l]');if(a){e.preventDefault();const u=prompt('Nueva URL del enlace',a.getAttribute('href'));if(u){a.setAttribute('href',u);persist()}return}
+if(e.target.closest('summary,a.pc'))e.preventDefault()});
+$('#f').onchange=ev=>{const f=ev.target.files[0];if(!f||!pick)return;const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,1400/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);pick.style.backgroundImage='url('+c.toDataURL('image/jpeg',.82)+')';pick.classList.add('has');persist()};i.src=r.result};r.readAsDataURL(f);ev.target.value=''};
+$('#sv').onclick=()=>{const was=document.body.classList.contains('editing');setEdit(false);const h='<!DOCTYPE html>\n'+document.documentElement.outerHTML;if(was)setEdit(true);const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='portafolio-felipa-pereira-web.html';a.click()};
+document.addEventListener('submit',async ev=>{if(ev.target.id!=='cf')return;ev.preventDefault();const cf=ev.target,st=$('#st'),b=cf.querySelector('button');if(document.body.classList.contains('editing')){st.textContent='Sal del modo edición para probar el formulario.';return}b.disabled=true;st.textContent='Enviando...';try{const r=await fetch('https://formsubmit.co/ajax/felipapereira96@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:new FormData(cf)});if(!r.ok)throw 0;cf.reset();st.textContent='¡Gracias! Recibí tu mensaje y te respondo pronto.'}catch(e){st.innerHTML='No se pudo enviar. Escribime a <a href="mailto:felipapereira96@gmail.com">felipapereira96@gmail.com</a> o por LinkedIn.'}b.disabled=false});
+$('#rs').onclick=()=>{if(confirm('Se borrarán tus cambios guardados en este navegador. ¿Continuar?')){try{localStorage.removeItem(KEY)}catch(e){}location.reload()}};
+</script>
+</body>
+</html>
